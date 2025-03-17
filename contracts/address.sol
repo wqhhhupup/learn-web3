@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.28;
+import "@openzeppelin/contracts/utils/Address.sol";
 
 contract AddressType {
+    using Address for address;
     mapping(address => bool) whitelist;
     address public myAddress; // 是一个 20 字节（160 位）的值，代表以太坊区块链上的一个账户地址。
 
@@ -37,5 +39,15 @@ contract AddressType {
         require(isWhitelist(rec), "You are not in whitelist");
         (bool success, ) = rec.call{value: 1 ether}("");
         require(success, "Transfer failed");
+    }
+
+    function isAdress(address _add) public pure returns (bool) {
+        // return _add.isContract();
+
+        if (_add.isContract()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
