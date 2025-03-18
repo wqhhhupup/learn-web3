@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.28;
-import "@openzeppelin/contracts/ownership/Ownable.sol";
-import "@openzeppelin/contracts/contracts/math/SafeMath.sol";
+// import "@openzeppelin/contracts/ownership/Ownable.sol";
+import "@openzeppelin/contracts/utils/math/Math.sol";
 
 library SafeMath {
     // 加法运算，溢出时抛出异常
@@ -36,11 +36,11 @@ library SafeMath {
     }
 }
 
-contract MyContract is Ownable {
-    using SafeMath for uint256;
-    uint z;
+// contract MyContract is Ownable {
+//     using SafeMath for uint256;
+//     uint z;
 
-    function add(uint y) public {
-        z = z.add(y);
-    }
-}
+//     function add(uint y) public {
+//         z = z.add(y);
+//     }
+// }

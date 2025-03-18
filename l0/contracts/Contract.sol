@@ -10,7 +10,7 @@ contract Hello {
     }
 
     function destroy(address payable recipient) public {
-        selfdestruct(recipient); // 销毁合约发送剩余的以太币给指定地址
+        // selfdestruct(recipient); // 销毁合约发送剩余的以太币给指定地址
 
         //  Cancun 硬分叉后，selfdestruct 不会删除代码和数据，只会转移余额。
         // EIP-6780 修改了 selfdestruct 逻辑，未来可能进一步限制该操作码。

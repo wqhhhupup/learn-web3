@@ -41,13 +41,13 @@ contract AddressType {
         require(success, "Transfer failed");
     }
 
-    function isAdress(address _add) public pure returns (bool) {
-        // return _add.isContract();
+    // function isAdress(address _add) public pure returns (bool) {
+    //     // return _add.isContract();
 
-        if (_add.isContract()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    //     if (_add.isContract()) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
 }
